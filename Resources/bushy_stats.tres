@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://bmtf5yictrwqb"]
+
+[ext_resource type="Script" path="res://Scripts/player_stats.gd" id="1_5hdbm"]
+
+[resource]
+script = ExtResource("1_5hdbm")
+movement_speed = 150.0
+ground_acceleration_time = 0.1
+ground_deceleration_time = 0.1
+air_acceleration_time = 0.1
+air_deceleration_time = 0.1
+jumps = 1.0
+jump_time = 0.5
+jump_height = 55
+jump_min_height = 14
+jump_lenght = 45
+jump_min_lenght = 14
+peak_multiplier = 0.5
+fall_multiplier = 1.2
+treshold = 80.0
+jump_buffer_time = 0.1
+coyote_time = 0.1
+jump_correction = 6.0
+dash_time = 0.14
+dash_distance = 64
+dash_recovery_time = 0.06
+dash_recovery_distance = 16
