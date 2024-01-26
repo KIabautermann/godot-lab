@@ -21,13 +21,13 @@ func process_input(event: InputEvent) -> State:
 
 func process_frame (delta: float) -> State:
 	super(delta)
-	parent.flip(axis_x)
+	parent.flip(axis.x)
 	return null	
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += values.regular_gravity * delta
 	
-	parent._movementX(axis_x, stats.movement_speed, values.ground_acceleration, delta)
+	parent._movementX(axis.x, stats.movement_speed, values.ground_acceleration, delta)
 	
 	if !parent.is_on_floor():
 		return states.fall

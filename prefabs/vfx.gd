@@ -1,12 +1,13 @@
-extends Label
-var pos
+extends AnimatedSprite2D
+@export var lifetime : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pos = global_position
+	play()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	lifetime -= delta
+	if lifetime <= 0 : queue_free()

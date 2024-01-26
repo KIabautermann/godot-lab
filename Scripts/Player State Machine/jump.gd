@@ -33,7 +33,7 @@ func process_input(event: InputEvent) -> State:
 
 func process_frame (delta: float) -> State:
 	super(delta)
-	if axis_x != 0: parent.flip(axis_x)
+	if axis.x != 0: parent.flip(axis.x)
 	return null	
 
 func process_physics(delta: float) -> State:
@@ -52,10 +52,10 @@ func process_physics(delta: float) -> State:
 	if parent.velocity.y >= 0:
 		return states.fall
 	
-	if axis_x != 0:
-		parent._movementX(axis_x, stats.movement_speed, values.air_acceleration, delta)
+	if axis.x != 0:
+		parent._movementX(axis.x, stats.movement_speed, values.air_acceleration, delta)
 	else:
-		parent._movementX(axis_x, 0, values.air_deceleration, delta)
+		parent._movementX(axis.x, 0, values.air_deceleration, delta)
 	
 	if parent.is_on_floor():
 		parent.animations["parameters/basicMovement/1/conditions/land"] = true

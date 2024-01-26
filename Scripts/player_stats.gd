@@ -28,10 +28,12 @@ class_name PlayerStats
 
 #region Dash
 @export_group("Dash")
+@export var dash_startup : float
 @export var dash_time : float
 @export var dash_distance : int
 @export var dash_recovery_time : float
 @export var dash_recovery_distance : int
+@export var exit_fall_velocity : float
 #endregion
 
 

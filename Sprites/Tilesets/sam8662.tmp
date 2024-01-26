@@ -583,12 +583,16 @@ script = ExtResource("4_ukqyj")
 [node name="move" type="Node" parent="Bushy 1/StateMachine/state_container"]
 script = ExtResource("5_c8slw")
 
-[node name="jump" type="Node" parent="Bushy 1/StateMachine/state_container" node_paths=PackedStringArray("left_detection_inner", "left_detection_outer", "right_detection_inner", "right_detection_outer")]
+[node name="jump" type="Node" parent="Bushy 1/StateMachine/state_container"]
 script = ExtResource("6_327jw")
-left_detection_inner = NodePath("../../../Collisions/left_inner")
-left_detection_outer = NodePath("../../../Collisions/left_outer")
-right_detection_inner = NodePath("../../../Collisions/right_inner")
-right_detection_outer = NodePath("../../../Collisions/right_outer")
+left_detection_inner = Object(RayCast2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(1, -5),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"enabled":true,"exclude_parent":true,"target_position":Vector2(0, -8),"collision_mask":1,"hit_from_inside":false,"collide_with_areas":false,"collide_with_bodies":true,"script":null)
+
+left_detection_outer = Object(RayCast2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(-5, -5),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"enabled":true,"exclude_parent":true,"target_position":Vector2(0, -8),"collision_mask":1,"hit_from_inside":false,"collide_with_areas":false,"collide_with_bodies":true,"script":null)
+
+right_detection_inner = Object(RayCast2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(-1, -5),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"enabled":true,"exclude_parent":true,"target_position":Vector2(0, -8),"collision_mask":1,"hit_from_inside":false,"collide_with_areas":false,"collide_with_bodies":true,"script":null)
+
+right_detection_outer = Object(RayCast2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(5, -5),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"enabled":true,"exclude_parent":true,"target_position":Vector2(0, -8),"collision_mask":1,"hit_from_inside":false,"collide_with_areas":false,"collide_with_bodies":true,"script":null)
+
 
 [node name="fall" type="Node" parent="Bushy 1/StateMachine/state_container"]
 script = ExtResource("7_dvqxv")
@@ -627,7 +631,7 @@ one_shot = true
 script = ExtResource("13_cdjjp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(336, 166)
+position = Vector2(244, 159)
 zoom = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

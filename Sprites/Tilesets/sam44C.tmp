@@ -599,7 +599,7 @@ script = ExtResource("7_yw0nw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bushy 1"]
 sprite_frames = ExtResource("8_68x5g")
 animation = &"idle"
-frame = 1
+frame = 6
 
 [node name="AnimationTree" type="AnimationTree" parent="Bushy 1/AnimatedSprite2D"]
 root_node = NodePath(".")
@@ -627,7 +627,7 @@ one_shot = true
 script = ExtResource("13_cdjjp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(336, 166)
+position = Vector2(244, 159)
 zoom = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqa0bbg8fl8s3"]
+
+[ext_resource type="SpriteFrames" uid="uid://cxiufrflbg8vq" path="res://Resources/dash_trail_frames.tres" id="1_afmdf"]
+[ext_resource type="Script" path="res://prefabs/vfx.gd" id="2_w6bnl"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = -2
+sprite_frames = ExtResource("1_afmdf")
+script = ExtResource("2_w6bnl")
+lifetime = 0.333

@@ -22,6 +22,7 @@ extends CharacterBody2D
 
 @export var right_inner_ray : RayCast2D
 #endregion
+@onready var UI : Label = $"../FPS COUNTER"
 
 var jumps_left = 0;
 

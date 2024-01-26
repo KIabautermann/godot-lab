@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cxiufrflbg8vq"]
+
+[ext_resource type="Texture2D" uid="uid://d4lqvthmyil0e" path="res://Sprites/dash_trail.png" id="1_un1wv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j052t"]
+atlas = ExtResource("1_un1wv")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyded"]
+atlas = ExtResource("1_un1wv")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1ewn"]
+atlas = ExtResource("1_un1wv")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykffb"]
+atlas = ExtResource("1_un1wv")
+region = Rect2(8, 8, 8, 8)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j052t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyded")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1ewn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykffb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
