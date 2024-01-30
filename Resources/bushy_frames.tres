@@ -1,10 +1,22 @@
-[gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://6t58adoiikcq"]
+[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://6t58adoiikcq"]
 
 [ext_resource type="Texture2D" uid="uid://bsfqyx8letd0l" path="res://Sprites/bushy atlas.png" id="1_q5qbp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rb3ml"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pstpx"]
 atlas = ExtResource("1_q5qbp")
-region = Rect2(32, 32, 16, 16)
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x827d"]
+atlas = ExtResource("1_q5qbp")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6808w"]
+atlas = ExtResource("1_q5qbp")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poyfw"]
+atlas = ExtResource("1_q5qbp")
+region = Rect2(32, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irvxn"]
 atlas = ExtResource("1_q5qbp")
@@ -94,11 +106,35 @@ region = Rect2(32, 48, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rb3ml")
+"texture": SubResource("AtlasTexture_pstpx")
 }],
 "loop": true,
-"name": &"dash",
-"speed": 12.0
+"name": &"dash_l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x827d")
+}],
+"loop": true,
+"name": &"dash_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6808w")
+}],
+"loop": true,
+"name": &"dash_x",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poyfw")
+}],
+"loop": true,
+"name": &"dash_y",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

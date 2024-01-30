@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dplux820ygfj2"]
+[gd_scene load_steps=60 format=3 uid="uid://dplux820ygfj2"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_d0dgs"]
 [ext_resource type="Resource" uid="uid://bmtf5yictrwqb" path="res://Resources/bushy_stats.tres" id="3_vod0h"]
@@ -12,8 +12,8 @@
 [ext_resource type="Script" path="res://Scripts/Player State Machine/dash.gd" id="7_yw0nw"]
 [ext_resource type="SpriteFrames" uid="uid://6t58adoiikcq" path="res://Resources/bushy_frames.tres" id="8_68x5g"]
 [ext_resource type="Script" path="res://Sprites/Tilesets/timer_test.gd" id="13_cdjjp"]
+[ext_resource type="Script" path="res://Sprites/Tilesets/visuals.gd" id="14_4am27"]
 [ext_resource type="Script" path="res://Sprites/Tilesets/fps_counter.gd" id="14_437r8"]
-[ext_resource type="Shader" uid="uid://ve68ncx1hyst" path="res://Sprites/Tilesets/sample_map.tres" id="14_x7no7"]
 [ext_resource type="Texture2D" uid="uid://dg52ngrc5sxdr" path="res://Sprites/Tilesets/Source/grass tileset.png" id="Grass"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0"]
@@ -653,13 +653,9 @@ states/dash/node = SubResource("AnimationNodeBlendSpace2D_y3p4l")
 states/dash/position = Vector2(579, 102)
 transitions = ["Start", "basicMovement", SubResource("AnimationNodeStateMachineTransition_5cjy2"), "basicMovement", "dash", SubResource("AnimationNodeStateMachineTransition_daecu"), "dash", "basicMovement", SubResource("AnimationNodeStateMachineTransition_x437b")]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7drap"]
-shader = ExtResource("14_x7no7")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtfba"]
 
 [node name="sample_map" type="TileMap"]
-z_index = -5
 tile_set = SubResource("TileSet_0")
 format = 2
 layer_0/name = "terrain"
@@ -735,7 +731,7 @@ script = ExtResource("7_yw0nw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bushy 1"]
 sprite_frames = ExtResource("8_68x5g")
 animation = &"idle"
-frame = 1
+frame = 7
 
 [node name="AnimationTree" type="AnimationTree" parent="Bushy 1/AnimatedSprite2D"]
 root_node = NodePath(".")
@@ -763,13 +759,12 @@ process_callback = 0
 one_shot = true
 script = ExtResource("13_cdjjp")
 
-[node name="Line2D" type="Line2D" parent="Bushy 1"]
-material = SubResource("ShaderMaterial_7drap")
-width = 3.0
-default_color = Color(0.988235, 0.901961, 0.776471, 1)
+[node name="Extra Visuals" type="Node2D" parent="Bushy 1"]
+script = ExtResource("14_4am27")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(336, 166)
+zoom = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(165, 195)

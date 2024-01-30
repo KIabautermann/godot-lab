@@ -70,4 +70,5 @@ func jump_correction() -> int:
 func flip(direction: int):
 	sprite.flip_h = direction < 0
 	facing_direction = direction
+	
 

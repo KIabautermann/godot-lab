@@ -2,36 +2,36 @@
 
 [ext_resource type="Texture2D" uid="uid://d4lqvthmyil0e" path="res://Sprites/dash_trail.png" id="1_un1wv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j052t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwglk"]
 atlas = ExtResource("1_un1wv")
-region = Rect2(0, 0, 8, 8)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vyded"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk11v"]
 atlas = ExtResource("1_un1wv")
-region = Rect2(8, 0, 8, 8)
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1ewn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xcmv"]
 atlas = ExtResource("1_un1wv")
-region = Rect2(0, 8, 8, 8)
+region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ykffb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qegjl"]
 atlas = ExtResource("1_un1wv")
-region = Rect2(8, 8, 8, 8)
+region = Rect2(32, 32, 32, 32)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j052t")
+"texture": SubResource("AtlasTexture_wwglk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vyded")
+"texture": SubResource("AtlasTexture_uk11v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o1ewn")
+"texture": SubResource("AtlasTexture_1xcmv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ykffb")
+"texture": SubResource("AtlasTexture_qegjl")
 }],
 "loop": true,
 "name": &"default",
